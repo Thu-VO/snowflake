@@ -1,0 +1,14 @@
+profiles.yml
+
+# Python
+.venv/
+__pycache__/
+
+# dbt
+target/
+dbt_packages/
+logs/
+
+# Local config / secrets
+.DS_Store
+.vscode/
