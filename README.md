@@ -1,15 +1,19 @@
-Welcome to your new dbt project!
+# DBT – Snowflake Music Exam
 
-### Using the starter project
+## Objectif
+Migration des requêtes SQL Snowflake vers dbt :
+- déclaration des sources
+- modèles staging
+- schéma en étoile
+- vues de requêtes d’analyse
 
-Try running the following commands:
-- dbt run
-- dbt test
+## Structure
+- models/sources : sources Snowflake
+- models/staging : nettoyage / renommage
+- models/marts/star : schéma en étoile
+- models/exam_queries : vues correspondant aux questions 3.1 à 3.11
 
-
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+## Exécution
+dbt run
+dbt test
+dbt run --select tag:exam_queries
